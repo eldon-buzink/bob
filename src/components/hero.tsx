@@ -90,7 +90,7 @@ export function Hero() {
           <div className="relative">
             <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero-garden.webp"
+                src="/images/image.png"
                 alt="Mooie tuin met professioneel onderhoud"
                 fill
                 className="object-cover"
