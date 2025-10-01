@@ -14,8 +14,8 @@ export async function sendContactEmail(data: {
 
   try {
     const { data: result, error } = await resend.emails.send({
-      from: "Website <no-reply@hovenier-jansen.nl>",
-      to: ["info@hovenier-jansen.nl"],
+      from: "Website <no-reply@bobsgroen.nl>",
+      to: ["info@bobsgroen.nl"],
       subject: `Nieuwe lead via website: ${data.name}`,
       html: `
         <h2>Nieuwe lead via website</h2>

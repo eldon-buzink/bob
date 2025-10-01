@@ -1,8 +1,8 @@
 export const siteConfig = {
   business: {
-    name: "Hovenier Jansen",
+    name: "Bobsgroen Hoveniers",
     phone: "+31 6 12 34 56 78",
-    email: "info@hovenier-jansen.nl",
+    email: "info@bobsgroen.nl",
     street: "Dorpsstraat 12",
     postalCode: "1234 AB",
     city: "Amersfoort",
@@ -15,13 +15,13 @@ export const siteConfig = {
   },
   site: {
     url: process.env.SITE_URL ?? "http://localhost:3000",
-    title: "Hovenier Jansen – Tuinontwerp, Aanleg & Onderhoud",
+    title: "Bobsgroen Hoveniers – Tuinontwerp, Aanleg & Onderhoud",
     description:
       "Vakmanschap in tuinontwerp, tuinaanleg en periodiek onderhoud. Snelle offerte en transparante prijzen.",
   },
   social: {
     whatsapp: "https://wa.me/31612345678",
-    instagram: "https://instagram.com/hovenierjansen",
-    maps: "https://maps.google.com/?q=Hovenier+Jansen",
+    instagram: "https://instagram.com/bobsgroen",
+    maps: "https://maps.google.com/?q=Bobsgroen+Hoveniers",
   },
 } as const;
