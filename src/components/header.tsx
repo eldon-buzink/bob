@@ -20,13 +20,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-3">
+        <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
           <img 
             src="/logo.svg" 
             alt="Bobsgroen Hoveniers Logo" 
-            className="h-10 w-auto"
+            className="h-12 w-auto max-w-[200px]"
           />
-          <span className="text-xl font-bold">{siteConfig.business.name}</span>
         </Link>
 
         {/* Desktop Navigation */}
