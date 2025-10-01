@@ -1,0 +1,19 @@
+# Placeholder Images
+
+Deze directory bevat placeholder afbeeldingen voor de website. 
+In productie zouden hier echte, geoptimaliseerde afbeeldingen staan:
+
+- hero-garden.webp - Hero afbeelding voor de homepage
+- tuinontwerp.webp - Afbeelding voor tuinontwerp dienst
+- tuinaanleg.webp - Afbeelding voor tuinaanleg dienst  
+- onderhoud.webp - Afbeelding voor onderhoud dienst
+- bestrating.webp - Afbeelding voor bestrating dienst
+- schuttingen.webp - Afbeelding voor schuttingen dienst
+- beregening.webp - Afbeelding voor beregening dienst
+- team.webp - Team foto voor over-ons pagina
+
+Alle afbeeldingen moeten geoptimaliseerd zijn voor web:
+- WebP formaat voor betere compressie
+- Responsive sizes (640w, 750w, 828w, 1080w, 1200w, 1920w)
+- Alt text voor accessibility
+- Lazy loading voor performance
