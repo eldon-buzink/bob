@@ -24,7 +24,7 @@ export function PhoneWhatsAppSticky() {
       <div className="flex space-x-2">
         <a
           href={`tel:${siteConfig.business.phone}`}
-          className="flex-1 btn btn-primary flex items-center justify-center space-x-2 py-3"
+          className="flex-1 btn btn-primary flex items-center justify-center space-x-2 py-4 px-4 text-base font-semibold min-h-[48px]"
         >
           <Phone className="h-5 w-5" />
           <span>Bellen</span>
@@ -33,7 +33,7 @@ export function PhoneWhatsAppSticky() {
           href={siteConfig.social.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 btn btn-secondary flex items-center justify-center space-x-2 py-3"
+          className="flex-1 btn btn-secondary flex items-center justify-center space-x-2 py-4 px-4 text-base font-semibold min-h-[48px]"
         >
           <MessageCircle className="h-5 w-5" />
           <span>WhatsApp</span>

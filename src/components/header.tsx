@@ -19,12 +19,12 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+      <div className="container flex h-14 sm:h-16 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity">
           <img 
             src="/logo.svg" 
             alt="Bobsgroen Hoveniers Logo" 
-            className="h-12 w-auto max-w-[200px]"
+            className="h-8 sm:h-12 w-auto max-w-[150px] sm:max-w-[200px]"
           />
         </Link>
 
@@ -60,7 +60,7 @@ export function Header() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden"
+          className="md:hidden p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -76,23 +76,23 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-sm font-medium transition-colors hover:text-primary"
+                className="block text-base font-medium transition-colors hover:text-primary py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 border-t">
+            <div className="pt-4 border-t space-y-4">
               <a
                 href={`tel:${siteConfig.business.phone}`}
-                className="flex items-center space-x-2 text-sm font-medium text-primary mb-4"
+                className="flex items-center space-x-2 text-base font-medium text-primary"
               >
-                <Phone className="h-4 w-4" />
+                <Phone className="h-5 w-5" />
                 <span>{siteConfig.business.phone}</span>
               </a>
               <Link
                 href="/contact"
-                className="btn btn-primary w-full"
+                className="btn btn-primary w-full py-3 text-base font-semibold min-h-[48px] flex items-center justify-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Vraag Offerte

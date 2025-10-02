@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ name, text, location, rating = 5 }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
       <div className="flex items-center space-x-1 mb-4">
         {[...Array(5)].map((_, i) => (
           <Star 
@@ -23,15 +23,15 @@ export function TestimonialCard({ name, text, location, rating = 5 }: Testimonia
         ))}
       </div>
       
-      <blockquote className="text-gray-700 mb-4 italic">
+      <blockquote className="text-gray-700 mb-4 italic text-sm sm:text-base leading-relaxed">
         "{text}"
       </blockquote>
       
       <div className="flex items-center justify-between">
         <div>
-          <div className="font-semibold text-gray-900">{name}</div>
+          <div className="font-semibold text-gray-900 text-sm sm:text-base">{name}</div>
           {location && (
-            <div className="flex items-center text-sm text-gray-500">
+            <div className="flex items-center text-xs sm:text-sm text-gray-500">
               <MapPin className="h-3 w-3 mr-1" />
               {location}
             </div>

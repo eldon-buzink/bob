@@ -15,7 +15,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div className="group bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
       {service.heroImage && (
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-32 sm:h-48 overflow-hidden">
           <Image
             src={service.heroImage}
             alt={service.title}
@@ -26,19 +26,19 @@ export function ServiceCard({ service }: ServiceCardProps) {
         </div>
       )}
       
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+      <div className="p-4 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
           {service.title}
         </h3>
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
           {service.summary}
         </p>
         <Link
           href={`/diensten/${service.slug}`}
-          className="inline-flex items-center text-primary hover:text-primary/80 font-medium group-hover:translate-x-1 transition-transform duration-200"
+          className="inline-flex items-center text-sm sm:text-base text-primary hover:text-primary/80 font-medium group-hover:translate-x-1 transition-transform duration-200"
         >
           Meer informatie
-          <ArrowRight className="ml-2 h-4 w-4" />
+          <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
         </Link>
       </div>
     </div>
