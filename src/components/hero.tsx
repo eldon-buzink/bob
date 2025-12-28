@@ -17,7 +17,7 @@ export function Hero() {
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 max-w-2xl">
                 Van ontwerp tot onderhoud: vakmanschap in tuinontwerp, tuinaanleg en periodiek onderhoud. 
-                Snelle offerte en transparante prijzen.
+                Gratis offerte en transparante prijzen.
               </p>
             </div>
 
@@ -25,7 +25,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                <span>CBW-erkend</span>
+                <span>Persoonlijke aanpak</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
@@ -33,7 +33,7 @@ export function Hero() {
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                <span>Binnen 24u retour belletje</span>
+                <span>Gratis offerte</span>
               </div>
             </div>
 
@@ -72,16 +72,16 @@ export function Hero() {
             {/* Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               <div className="text-center p-3 sm:p-4 bg-white/50 rounded-lg">
-                <div className="text-xl sm:text-2xl font-bold text-primary">24h</div>
-                <div className="text-xs sm:text-sm text-gray-600">Snelle offerte</div>
-              </div>
-              <div className="text-center p-3 sm:p-4 bg-white/50 rounded-lg">
                 <div className="text-xl sm:text-2xl font-bold text-primary">10+</div>
                 <div className="text-xs sm:text-sm text-gray-600">Jaren ervaring</div>
               </div>
               <div className="text-center p-3 sm:p-4 bg-white/50 rounded-lg">
                 <div className="text-xl sm:text-2xl font-bold text-primary">120+</div>
                 <div className="text-xs sm:text-sm text-gray-600">Tevreden klanten</div>
+              </div>
+              <div className="text-center p-3 sm:p-4 bg-white/50 rounded-lg">
+                <div className="text-xl sm:text-2xl font-bold text-primary">100%</div>
+                <div className="text-xs sm:text-sm text-gray-600">Maatwerk</div>
               </div>
             </div>
           </div>

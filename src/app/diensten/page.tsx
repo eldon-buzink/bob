@@ -8,37 +8,19 @@ const services = [
     title: "Tuinontwerp",
     summary: "Professioneel tuinontwerp dat perfect aansluit bij uw wensen en de omgeving. Van moderne tot klassieke stijlen.",
     slug: "tuinontwerp",
-    heroImage: "/images/tuinontwerp.webp"
+    heroImage: "/images/APWA9274.JPEG"
   },
   {
     title: "Tuinaanleg",
     summary: "Complete aanleg van uw droomtuin met aandacht voor detail en duurzaamheid. Van bestrating tot beplanting.",
     slug: "tuinaanleg", 
-    heroImage: "/images/tuinaanleg.webp"
+    heroImage: "/images/AKCR7378.JPEG"
   },
   {
     title: "Onderhoud",
     summary: "Regelmatig onderhoud om uw tuin in topconditie te houden. Van snoeien tot bemesten en onkruidvrij maken.",
     slug: "onderhoud",
-    heroImage: "/images/onderhoud.webp"
-  },
-  {
-    title: "Bestrating",
-    summary: "Professionele bestrating voor terrassen, opritten en paden. Verschillende materialen en patronen mogelijk.",
-    slug: "bestrating",
-    heroImage: "/images/bestrating.webp"
-  },
-  {
-    title: "Schuttingen",
-    summary: "Houten schuttingen, hekwerken en afscheidingen voor privacy en veiligheid in uw tuin.",
-    slug: "schuttingen",
-    heroImage: "/images/schuttingen.webp"
-  },
-  {
-    title: "Beregening",
-    summary: "Automatische beregeningssystemen voor optimale verzorging van uw gazon en beplanting.",
-    slug: "beregening",
-    heroImage: "/images/beregening.webp"
+    heroImage: "/images/FVGZ7111.JPEG"
   }
 ];
 
@@ -51,10 +33,17 @@ export default function DienstenPage() {
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Onze Diensten
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Van ontwerp tot onderhoud: wij verzorgen alle aspecten van uw tuin 
-            met vakmanschap en aandacht voor detail.
-          </p>
+          <div className="text-xl text-gray-600 max-w-3xl mx-auto space-y-4">
+            <p>
+              Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
+            </p>
+            <p>
+              Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
+            </p>
+            <p>
+              Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
+            </p>
+          </div>
         </div>
 
         {/* Services Grid */}

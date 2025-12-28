@@ -9,37 +9,19 @@ const mockServices = [
     title: "Tuinontwerp",
     summary: "Professioneel tuinontwerp dat perfect aansluit bij uw wensen en de omgeving. Van moderne tot klassieke stijlen.",
     slug: "tuinontwerp",
-    heroImage: "/images/tuinontwerp.webp"
+    heroImage: "/images/APWA9274.JPEG"
   },
   {
     title: "Tuinaanleg",
     summary: "Complete aanleg van uw droomtuin met aandacht voor detail en duurzaamheid. Van bestrating tot beplanting.",
     slug: "tuinaanleg",
-    heroImage: "/images/tuinaanleg.webp"
+    heroImage: "/images/AKCR7378.JPEG"
   },
   {
     title: "Onderhoud",
     summary: "Regelmatig onderhoud om uw tuin in topconditie te houden. Van snoeien tot bemesten en onkruidvrij maken.",
     slug: "onderhoud",
-    heroImage: "/images/onderhoud.webp"
-  },
-  {
-    title: "Bestrating",
-    summary: "Professionele bestrating voor terrassen, opritten en paden. Verschillende materialen en patronen mogelijk.",
-    slug: "bestrating",
-    heroImage: "/images/bestrating.webp"
-  },
-  {
-    title: "Schuttingen",
-    summary: "Houten schuttingen, hekwerken en afscheidingen voor privacy en veiligheid in uw tuin.",
-    slug: "schuttingen",
-    heroImage: "/images/schuttingen.webp"
-  },
-  {
-    title: "Beregening",
-    summary: "Automatische beregeningssystemen voor optimale verzorging van uw gazon en beplanting.",
-    slug: "beregening",
-    heroImage: "/images/beregening.webp"
+    heroImage: "/images/FVGZ7111.JPEG"
   }
 ];
 

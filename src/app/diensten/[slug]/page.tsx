@@ -9,25 +9,11 @@ const mockServices = {
     title: "Tuinontwerp",
     summary: "Professioneel tuinontwerp dat perfect aansluit bij uw wensen en de omgeving. Van moderne tot klassieke stijlen.",
     content: `
-# Tuinontwerp
+Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
 
-Een goed tuinontwerp is de basis van een prachtige tuin. Wij maken ontwerpen die perfect aansluiten bij uw wensen, levensstijl en de omgeving.
+Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
 
-## Onze Aanpak
-
-- **Intake gesprek**: We bespreken uw wensen en behoeften
-- **Situatieonderzoek**: We analyseren de grond, ligging en bestaande elementen  
-- **Conceptontwerp**: We maken een eerste schets met de hoofdlijnen
-- **Definitief ontwerp**: Gedetailleerd plan met materialen en beplanting
-- **3D Visualisatie**: Voor grotere projecten maken we 3D beelden
-
-## Wat Krijgt U?
-
-- Gedetailleerd ontwerpplan op schaal
-- Materialenlijst en beplantingsplan
-- 3D visualisaties (bij grotere projecten)
-- Uitvoeringsplanning
-- Ondersteuning tijdens de aanleg
+Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
     `,
     faqs: [
       {"q": "Hoe lang duurt het ontwerpproces?", "a": "Het ontwerpproces duurt gemiddeld 2-4 weken, afhankelijk van de complexiteit van uw project."},
@@ -40,25 +26,11 @@ Een goed tuinontwerp is de basis van een prachtige tuin. Wij maken ontwerpen die
     title: "Tuinaanleg",
     summary: "Complete aanleg van uw droomtuin met aandacht voor detail en duurzaamheid. Van bestrating tot beplanting.",
     content: `
-# Tuinaanleg
+Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
 
-Van ontwerp naar realiteit: wij leggen uw tuin professioneel aan met vakmanschap en aandacht voor detail.
+Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
 
-## Onze Werkwijze
-
-1. **Voorbereiding**: Grondwerk, drainage en fundering
-2. **Hardscaping**: Bestrating, terrassen en constructies
-3. **Beplanting**: Bomen, struiken, vaste planten en gazon
-4. **Afronding**: Beregening, verlichting en details
-
-## Wat Wij Aanleggen
-
-- **Terrassen en bestrating**: Van natuursteen tot beton
-- **Beplanting**: Bomen, struiken, borders en gazon
-- **Waterpartijen**: Vijvers, fonteinen en waterlopen
-- **Constructies**: Pergola's, schuttingen en hekwerken
-- **Beregening**: Automatische sproei-installaties
-- **Verlichting**: Sfeervolle tuinverlichting
+Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
     `,
     faqs: [
       {"q": "Hoe lang duurt de aanleg van een tuin?", "a": "Dit hangt af van de omvang. Een kleine tuin kan in 1-2 dagen, een grote tuin kan 1-2 weken duren."},
@@ -71,18 +43,11 @@ Van ontwerp naar realiteit: wij leggen uw tuin professioneel aan met vakmanschap
     title: "Tuinonderhoud",
     summary: "Regelmatig onderhoud om uw tuin in topconditie te houden. Van snoeien tot bemesten en onkruidvrij maken.",
     content: `
-# Tuinonderhoud
+Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
 
-Regelmatig onderhoud verlengt de levensduur van uw tuin en voorkomt dure herstelwerkzaamheden.
+Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
 
-## Onze Onderhoudsdiensten
-
-- **Snoeien**: Bomen, struiken, hagen en rozen
-- **Bemesten**: Seizoensgebonden bemesting voor optimale groei
-- **Onkruidvrij**: Handmatig en mechanisch onkruid verwijderen
-- **Gazonverzorging**: Maaien, verticuteren en bemesten
-- **Borders bijwerken**: Beplanting onderhouden en aanvullen
-- **Seizoenswerk**: Voorjaars- en najaarsschoonmaak
+Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
     `,
     faqs: [
       {"q": "Hoe vaak is onderhoud nodig?", "a": "Gemiddeld 4-6 keer per jaar, afhankelijk van de beplanting en uw wensen."},
@@ -127,7 +92,17 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <div className="prose prose-lg max-w-none">
-              <div dangerouslySetInnerHTML={{ __html: service.content.replace(/\n/g, '<br>') }} />
+              <div className="space-y-4 text-gray-600">
+                {service.content
+                  .trim()
+                  .split('\n\n')
+                  .filter(para => para.trim())
+                  .map((paragraph, index) => (
+                    <p key={index} className="text-base leading-relaxed">
+                      {paragraph.trim()}
+                    </p>
+                  ))}
+              </div>
             </div>
           </div>
 
@@ -171,7 +146,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-gray-600">CBW-erkend</span>
+                  <span className="text-gray-600">Persoonlijke aanpak</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />

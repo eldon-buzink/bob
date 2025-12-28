@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
@@ -10,15 +11,17 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img 
+              <Image 
                 src="/logo.svg" 
                 alt="Bobsgroen Hoveniers Logo" 
-                className="h-10 w-auto max-w-[180px]"
+                width={200}
+                height={60}
+                className="h-10 w-auto max-w-[200px]"
               />
             </div>
             <p className="text-sm text-muted-foreground">
               Vakmanschap in tuinontwerp, tuinaanleg en periodiek onderhoud. 
-              Snelle offerte en transparante prijzen.
+              Gratis offerte en transparante prijzen.
             </p>
           </div>
 
@@ -29,7 +32,6 @@ export function Footer() {
               <li><Link href="/diensten/tuinontwerp" className="text-muted-foreground hover:text-primary">Tuinontwerp</Link></li>
               <li><Link href="/diensten/tuinaanleg" className="text-muted-foreground hover:text-primary">Tuinaanleg</Link></li>
               <li><Link href="/diensten/onderhoud" className="text-muted-foreground hover:text-primary">Onderhoud</Link></li>
-              <li><Link href="/diensten/bestrating" className="text-muted-foreground hover:text-primary">Bestrating</Link></li>
               <li><Link href="/diensten" className="text-muted-foreground hover:text-primary">Alle Diensten</Link></li>
             </ul>
           </div>
@@ -39,8 +41,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold">Bedrijf</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/over-ons" className="text-muted-foreground hover:text-primary">Over Ons</Link></li>
-              <li><Link href="/prijzen" className="text-muted-foreground hover:text-primary">Prijzen</Link></li>
-              <li><Link href="/reviews" className="text-muted-foreground hover:text-primary">Reviews</Link></li>
+              <li><Link href="/projecten" className="text-muted-foreground hover:text-primary">Projecten</Link></li>
               <li><Link href="/faq" className="text-muted-foreground hover:text-primary">FAQ</Link></li>
               <li><Link href="/servicegebied" className="text-muted-foreground hover:text-primary">Servicegebied</Link></li>
             </ul>

@@ -44,7 +44,7 @@ export default function ContactPage() {
                       {siteConfig.business.phone}
                     </a>
                     <p className="text-sm text-gray-600 mt-1">
-                      Bel direct voor een snelle offerte
+                      Bel direct voor een gratis offerte
                     </p>
                   </div>
                 </div>

@@ -8,11 +8,11 @@ export default function OverOnsPage() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Over Hovenier Jansen
+            Over Bobsgroen
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Al meer dan 10 jaar helpen wij klanten in de regio Amersfoort, Utrecht, 
-            Soest en Leusden met het realiseren van hun droomtuin.
+            Al meer dan 10 jaar helpen wij klanten in de regio Etten-Leur, Zevenbergen, 
+            Prinsenbeek en Breda met het realiseren van hun droomtuin.
           </p>
         </div>
 
@@ -24,30 +24,21 @@ export default function OverOnsPage() {
             </h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Het begon allemaal met een passie voor tuinen en de wens om mensen 
-                te helpen hun buitenruimte optimaal te benutten. Wat begon als een 
-                kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf 
-                in de regio.
+                Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
               </p>
               <p>
-                Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. 
-                Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te 
-                maken dat perfect aansluit bij uw levensstijl en de omgeving.
+                Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
               </p>
               <p>
-                Onze ervaring en vakmanschap, gecombineerd met moderne technieken en 
-                duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
+                Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
               </p>
             </div>
           </div>
-          <div className="relative h-96 rounded-2xl overflow-hidden">
-            <Image
-              src="/images/team.webp"
-              alt="Hovenier Jansen team"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          <div className="relative h-96 rounded-2xl overflow-hidden bg-gray-200 flex items-center justify-center">
+            <div className="text-center p-8">
+              <Users className="h-24 w-24 text-gray-400 mx-auto mb-4" />
+              <p className="text-gray-500 text-lg">Teamfoto volgt binnenkort</p>
+            </div>
           </div>
         </div>
 
@@ -99,15 +90,15 @@ export default function OverOnsPage() {
         {/* Certifications */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Certificeringen & Ervaring
+            Onze Ervaring & Waarden
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="flex flex-col items-center">
               <div className="bg-primary/10 rounded-lg p-6 mb-4">
                 <CheckCircle className="h-12 w-12 text-primary" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">CBW-erkend</h3>
-              <p className="text-sm text-gray-600">Gecertificeerd hoveniersbedrijf</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Persoonlijk</h3>
+              <p className="text-sm text-gray-600">Maatwerk voor elke tuin</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-primary/10 rounded-lg p-6 mb-4">

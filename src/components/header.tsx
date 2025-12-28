@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
@@ -12,8 +13,7 @@ export function Header() {
     { name: "Home", href: "/" },
     { name: "Diensten", href: "/diensten" },
     { name: "Over Ons", href: "/over-ons" },
-    { name: "Prijzen", href: "/prijzen" },
-    { name: "Reviews", href: "/reviews" },
+    { name: "Projecten", href: "/projecten" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -21,10 +21,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 sm:h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity">
-          <img 
+          <Image 
             src="/logo.svg" 
             alt="Bobsgroen Hoveniers Logo" 
-            className="h-8 sm:h-12 w-auto max-w-[150px] sm:max-w-[200px]"
+            width={200}
+            height={60}
+            className="h-8 sm:h-12 w-auto max-w-[180px] sm:max-w-[220px]"
+            priority
           />
         </Link>
 
