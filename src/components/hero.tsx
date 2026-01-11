@@ -90,8 +90,8 @@ export function Hero() {
           <div className="relative">
             <div className="relative h-64 sm:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/image.png"
-                alt="Mooie tuin met professioneel onderhoud"
+                src="/images/APWA9274.JPEG"
+                alt="Prachtige tuin gerealiseerd door Bobsgroen Hoveniers"
                 fill
                 className="object-cover"
                 priority
@@ -109,9 +109,9 @@ export function Hero() {
                 </div>
               </div>
               <p className="text-xs sm:text-sm text-gray-600 mb-2">
-                "Fantastisch werk! Onze tuin ziet er prachtig uit."
+                "Super blij met mijn tuin via Bobsgroen! Bob denkt mee, komt afspraken na en levert top werk. Zeker aan te raden!"
               </p>
-              <div className="text-xs sm:text-sm font-semibold">- Anja, Amersfoort</div>
+              <div className="text-xs sm:text-sm font-semibold">- Tim</div>
             </div>
           </div>
         </div>
