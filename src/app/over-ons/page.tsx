@@ -34,11 +34,14 @@ export default function OverOnsPage() {
               </p>
             </div>
           </div>
-          <div className="relative h-96 rounded-2xl overflow-hidden bg-gray-200 flex items-center justify-center">
-            <div className="text-center p-8">
-              <Users className="h-24 w-24 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-500 text-lg">Teamfoto volgt binnenkort</p>
-            </div>
+          <div className="relative h-96 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/MJYJ6092.JPEG"
+              alt="Bobsgroen Hoveniers team en projecten"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </div>
 
