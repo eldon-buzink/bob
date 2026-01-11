@@ -74,19 +74,19 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <TestimonialCard 
-              name="Anja" 
-              location="Amersfoort"
-              text="Super netjes gewerkt, tuin is weer tiptop! Zeer professioneel en vriendelijk." 
+              name="Eldon" 
+              text="Bob heeft mijn tuin weer helemaal klaar gemaakt voor het nieuwe seizoen. Harde werker en denkt graag met je mee over wat de beste opties zijn. Hele fijne vent om mee samen te werken en komt gewoon netjes zijn afspraken na. De tuinman die je moet hebben voor je projecten!"
+              rating={5}
             />
             <TestimonialCard 
-              name="Mark" 
-              location="Soest"
-              text="Snel een offerte en duidelijke prijs. Het werk is perfect uitgevoerd." 
+              name="Cindy" 
+              text="Superblij met de schutting, afdak en bestrating! Betrouwbaar, sympathiek en harde werker."
+              rating={5}
             />
             <TestimonialCard 
-              name="Leonie" 
-              location="Utrecht"
-              text="Prachtig ontwerp en perfecte uitvoering. Aanrader!" 
+              name="Tim" 
+              text="Super blij met mijn tuin via Bobsgroen! Bob denkt mee, komt afspraken na en levert top werk. Zeker aan te raden!"
+              rating={5}
             />
           </div>
         </div>
