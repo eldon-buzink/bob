@@ -1,11 +1,11 @@
 export const siteConfig = {
   business: {
     name: "Bobsgroen Hoveniers",
-    phone: "+31 6 12 34 56 78",
+    phone: "+31 6 81 08 41 28",
     email: "info@bobsgroen.nl",
-    street: "Bazuinlaan 131",
-    postalCode: "4876AX",
-    city: "Etten-Leur",
+    street: "Groenstraat 9A",
+    postalCode: "4716 SK",
+    city: "Sprundel",
     country: "NL",
     openingHours: [
       "Mo-Fr 08:00-18:00",
@@ -20,8 +20,8 @@ export const siteConfig = {
       "Vakmanschap in tuinontwerp, tuinaanleg en periodiek onderhoud. Gratis offerte en transparante prijzen.",
   },
   social: {
-    whatsapp: "https://wa.me/31612345678",
+    whatsapp: "https://wa.me/31681084128",
     instagram: "https://instagram.com/bobsgroen",
-    maps: "https://maps.google.com/?q=Bazuinlaan+131,+4876AX+Etten-Leur",
+    maps: "https://maps.google.com/?q=Groenstraat+9A,+4716+SK+Sprundel",
   },
 } as const;
