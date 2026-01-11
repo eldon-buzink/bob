@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/schema-jsonld";
 import { Phone, MessageCircle, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
@@ -9,12 +10,20 @@ const mockServices = {
     title: "Tuinontwerp",
     summary: "Professioneel tuinontwerp dat perfect aansluit bij uw wensen en de omgeving. Van moderne tot klassieke stijlen.",
     content: `
-Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
+Een goed tuinontwerp is de basis van een prachtige tuin. Bij Bobsgroen maken wij tuinontwerpen die perfect aansluiten bij uw wensen, levensstijl en de omgeving. Wij nemen de tijd om uw visie te begrijpen en deze te vertalen naar een praktisch en mooi ontwerp.
 
-Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
+Onze aanpak begint met een uitgebreid intakegesprek waarin we uw wensen, behoeften en budget bespreken. Vervolgens analyseren we de situatie: de grondsoort, ligging, zon en schaduw, bestaande elementen en de stijl van uw woning. Op basis hiervan maken wij een conceptontwerp dat we samen met u verfijnen tot een definitief ontwerpplan.
 
-Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
+U ontvangt een gedetailleerd ontwerpplan op schaal met materialenlijst, beplantingsplan en uitvoeringsplanning. Voor grotere projecten maken wij ook 3D visualisaties, zodat u het eindresultaat alvast kunt voorstellen.
     `,
+    galleryImages: [
+      "/images/APWA9274.JPEG",
+      "/images/IFAF1882.JPEG",
+      "/images/IMG_4010.JPG",
+      "/images/IMG_6159.JPG",
+      "/images/2ee5565a-61f5-4486-9ad7-12953e62b723.jpg",
+      "/images/42fa51c1-afe2-405a-be40-050de2a62e06.jpg"
+    ],
     faqs: [
       {"q": "Hoe lang duurt het ontwerpproces?", "a": "Het ontwerpproces duurt gemiddeld 2-4 weken, afhankelijk van de complexiteit van uw project."},
       {"q": "Krijg ik 3D visualisaties?", "a": "Ja, voor grotere projecten maken wij 3D visualisaties zodat u het eindresultaat kunt voorstellen."},
@@ -26,12 +35,22 @@ Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame ma
     title: "Tuinaanleg",
     summary: "Complete aanleg van uw droomtuin met aandacht voor detail en duurzaamheid. Van bestrating tot beplanting.",
     content: `
-Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
+Van ontwerp naar realiteit: wij leggen uw tuin professioneel aan met vakmanschap en aandacht voor detail. Onze werkwijze begint met grondwerk, drainage en fundering. Vervolgens leggen wij bestrating, terrassen en constructies aan. Daarna plaatsen wij de beplanting: bomen, struiken, vaste planten en gazon. Ten slotte ronden wij af met beregening, verlichting en andere details.
 
-Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
+Wij werken met duurzame, kwalitatief hoogwaardige materialen van gerenommeerde leveranciers. Of het nu gaat om natuursteen voor uw terras, kwaliteitsplanten van gerenommeerde kwekerijen, of duurzame houtsoorten voor constructies - wij zorgen voor materialen die jarenlang meegaan.
 
-Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
+Op al ons werk geven wij 2 jaar garantie en op beplanting zelfs 1 jaar groeigarantie. Wij bieden ook onderhoudsadvies en nazorg, zodat uw tuin blijft bloeien.
     `,
+    galleryImages: [
+      "/images/AKCR7378.JPEG",
+      "/images/BJNA2902.JPEG",
+      "/images/EDPX5962.JPEG",
+      "/images/HEQI3951.JPEG",
+      "/images/HLMM2515.JPEG",
+      "/images/IMG_4097.JPG",
+      "/images/IMG_4107.JPG",
+      "/images/IMG_6151.JPG"
+    ],
     faqs: [
       {"q": "Hoe lang duurt de aanleg van een tuin?", "a": "Dit hangt af van de omvang. Een kleine tuin kan in 1-2 dagen, een grote tuin kan 1-2 weken duren."},
       {"q": "Welke materialen gebruiken jullie?", "a": "We werken met duurzame, kwalitatief hoogwaardige materialen van gerenommeerde leveranciers."},
@@ -43,11 +62,11 @@ Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame ma
     title: "Tuinonderhoud",
     summary: "Regelmatig onderhoud om uw tuin in topconditie te houden. Van snoeien tot bemesten en onkruidvrij maken.",
     content: `
-Het begon allemaal met een passie voor tuinen en de wens om mensen te helpen hun buitenruimte optimaal te benutten. Wat begon als een kleine onderneming is uitgegroeid tot een gerenommeerd hoveniersbedrijf in de regio.
+Regelmatig onderhoud verlengt de levensduur van uw tuin en voorkomt dure herstelwerkzaamheden. Bij Bobsgroen bieden wij complete onderhoudsdiensten die ervoor zorgen dat uw tuin het hele jaar door op zijn best is.
 
-Wij geloven dat elke tuin uniek is en vraagt om een persoonlijke aanpak. Daarom nemen wij de tijd om uw wensen te begrijpen en een ontwerp te maken dat perfect aansluit bij uw levensstijl en de omgeving.
+Onze onderhoudsdiensten omvatten snoeien van bomen, struiken, hagen en rozen, seizoensgebonden bemesting voor optimale groei, handmatig en mechanisch onkruid verwijderen, gazonverzorging zoals maaien, verticuteren en bemesten, en het bijwerken van borders met beplanting.
 
-Onze ervaring en vakmanschap, gecombineerd met moderne technieken en duurzame materialen, zorgen voor resultaten waar u jarenlang van kunt genieten.
+Wij werken met vaste prijzen voor veelvoorkomende onderhoudspakketten, maar bieden ook maatwerk oplossingen. Gemiddeld komt onderhoud 4-6 keer per jaar, afhankelijk van de beplanting en uw wensen. Naast periodiek onderhoud bieden wij ook eenmalige snoeibeurten en seizoenswerkzaamheden.
     `,
     faqs: [
       {"q": "Hoe vaak is onderhoud nodig?", "a": "Gemiddeld 4-6 keer per jaar, afhankelijk van de beplanting en uw wensen."},
@@ -160,6 +179,31 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
           </div>
         </div>
+
+        {/* Image Gallery - Only for tuinontwerp and tuinaanleg */}
+        {('galleryImages' in service) && service.galleryImages && (
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+              Onze Projecten
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {(service as any).galleryImages.map((image: string, index: number) => (
+                <div
+                  key={index}
+                  className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer"
+                >
+                  <Image
+                    src={image}
+                    alt={`${service.title} project ${index + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* FAQs */}
         <div className="mt-16">
