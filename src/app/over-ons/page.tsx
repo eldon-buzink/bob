@@ -36,8 +36,8 @@ export default function OverOnsPage() {
           </div>
           <div className="relative h-96 rounded-2xl overflow-hidden">
             <Image
-              src="/images/MJYJ6092.JPEG"
-              alt="Bobsgroen Hoveniers team en projecten"
+              src="/images/PHOTO-2025-01-25-20-44-49 3.jpg"
+              alt="Bobsgroen team"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
