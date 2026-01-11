@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/schema-jsonld";
 import { Phone, MessageCircle, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import { ProjectGallery } from "@/components/project-gallery";
+import type { ProjectCategory } from "@/lib/projects-data";
 
 // Mock service data - in production this would come from Contentlayer
 const mockServices = {
@@ -16,14 +17,7 @@ Onze aanpak begint met een uitgebreid intakegesprek waarin we uw wensen, behoeft
 
 U ontvangt een gedetailleerd ontwerpplan op schaal met materialenlijst, beplantingsplan en uitvoeringsplanning. Voor grotere projecten maken wij ook 3D visualisaties, zodat u het eindresultaat alvast kunt voorstellen.
     `,
-    galleryImages: [
-      "/images/APWA9274.JPEG",
-      "/images/IFAF1882.JPEG",
-      "/images/IMG_4010.JPG",
-      "/images/IMG_6159.JPG",
-      "/images/2ee5565a-61f5-4486-9ad7-12953e62b723.jpg",
-      "/images/42fa51c1-afe2-405a-be40-050de2a62e06.jpg"
-    ],
+    projectCategory: "Tuinontwerp" as ProjectCategory,
     faqs: [
       {"q": "Hoe lang duurt het ontwerpproces?", "a": "Het ontwerpproces duurt gemiddeld 2-4 weken, afhankelijk van de complexiteit van uw project."},
       {"q": "Krijg ik 3D visualisaties?", "a": "Ja, voor grotere projecten maken wij 3D visualisaties zodat u het eindresultaat kunt voorstellen."},
@@ -41,16 +35,7 @@ Wij werken met duurzame, kwalitatief hoogwaardige materialen van gerenommeerde l
 
 Op al ons werk geven wij 2 jaar garantie en op beplanting zelfs 1 jaar groeigarantie. Wij bieden ook onderhoudsadvies en nazorg, zodat uw tuin blijft bloeien.
     `,
-    galleryImages: [
-      "/images/AKCR7378.JPEG",
-      "/images/BJNA2902.JPEG",
-      "/images/EDPX5962.JPEG",
-      "/images/HEQI3951.JPEG",
-      "/images/HLMM2515.JPEG",
-      "/images/IMG_4097.JPG",
-      "/images/IMG_4107.JPG",
-      "/images/IMG_6151.JPG"
-    ],
+    projectCategory: "Tuinaanleg" as ProjectCategory,
     faqs: [
       {"q": "Hoe lang duurt de aanleg van een tuin?", "a": "Dit hangt af van de omvang. Een kleine tuin kan in 1-2 dagen, een grote tuin kan 1-2 weken duren."},
       {"q": "Welke materialen gebruiken jullie?", "a": "We werken met duurzame, kwalitatief hoogwaardige materialen van gerenommeerde leveranciers."},
@@ -181,27 +166,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
 
         {/* Image Gallery - Only for tuinontwerp and tuinaanleg */}
-        {('galleryImages' in service) && service.galleryImages && (
+        {('projectCategory' in service) && service.projectCategory && (
           <div className="mt-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
               Onze Projecten
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {(service as any).galleryImages.map((image: string, index: number) => (
-                <div
-                  key={index}
-                  className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer"
-                >
-                  <Image
-                    src={image}
-                    alt={`${service.title} project ${index + 1}`}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  />
-                </div>
-              ))}
-            </div>
+            <ProjectGallery 
+              category={(service as any).projectCategory} 
+              columns={4}
+            />
           </div>
         )}
 
