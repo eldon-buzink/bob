@@ -21,7 +21,7 @@ const mockServices = [
     title: "Onderhoud",
     summary: "Regelmatig onderhoud om uw tuin in topconditie te houden. Van snoeien tot bemesten en onkruidvrij maken.",
     slug: "onderhoud",
-    heroImage: "/images/FVGZ7111.JPEG"
+    heroImage: "/images/MJYJ6092.JPEG"
   }
 ];
 
