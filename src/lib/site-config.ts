@@ -11,13 +11,13 @@ export const siteConfig = {
       "Mo-Fr 08:00-18:00",
       "Sa 09:00-14:00",
     ],
-    serviceArea: ["Etten-Leur", "Zevenbergen", "Prinsenbeek", "Breda"],
+    serviceArea: ["Etten-Leur", "Zevenbergen", "Prinsenbeek", "Breda", "Roosendaal", "Sprundel", "Hoeven"],
   },
   site: {
     url: process.env.SITE_URL ?? "http://localhost:3000",
     title: "Bobsgroen Hoveniers – Tuinontwerp, Aanleg & Onderhoud",
     description:
-      "Vakmanschap in tuinontwerp, tuinaanleg en periodiek onderhoud. Gratis offerte en transparante prijzen.",
+      "Professionele hovenier in Etten-Leur, Roosendaal, Sprundel en omgeving. Tuinontwerp, tuinaanleg en periodiek onderhoud. Gratis offerte en transparante prijzen.",
   },
   social: {
     whatsapp: "https://wa.me/31681084128",

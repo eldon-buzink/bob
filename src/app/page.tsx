@@ -1,7 +1,18 @@
+import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { ServiceCard } from "@/components/service-card";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { PhoneWhatsAppSticky } from "@/components/phone-whatsapp-sticky";
+import { siteConfig } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Bobsgroen Hoveniers",
+  description: "Professionele hovenier in Etten-Leur, Roosendaal, Sprundel en omgeving. Tuinontwerp, tuinaanleg en periodiek onderhoud. Gratis offerte en transparante prijzen.",
+  openGraph: {
+    title: "Bobsgroen Hoveniers – Tuinontwerp, Aanleg & Onderhoud",
+    description: "Professionele hovenier in Etten-Leur, Roosendaal, Sprundel en omgeving. Tuinontwerp, tuinaanleg en periodiek onderhoud. Gratis offerte en transparante prijzen.",
+  },
+};
 
 // Mock services data - will be replaced with Contentlayer
 const mockServices = [

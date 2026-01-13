@@ -59,29 +59,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/diensten/onderhoud`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/diensten/bestrating`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/diensten/schuttingen`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/diensten/beregening`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-  ]
-}
+        {
+          url: `${baseUrl}/diensten/onderhoud`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+        // Location-specific pages
+        {
+          url: `${baseUrl}/hovenier-roosendaal`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+        {
+          url: `${baseUrl}/hovenier-sprundel`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+        {
+          url: `${baseUrl}/hovenier-hoeven`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+      ]
+    }
