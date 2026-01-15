@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/schema-jsonld";
-import { Phone, MessageCircle, CheckCircle } from "lucide-react";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { Phone, MessageCircle, CheckCircle, MapPin } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { ProjectGallery } from "@/components/project-gallery";
 import type { ProjectCategory } from "@/lib/projects-data";
