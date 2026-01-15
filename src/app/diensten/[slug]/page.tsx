@@ -233,6 +233,28 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
           </div>
         </div>
+
+        {/* Service Areas */}
+        <div className="mt-16 bg-muted rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">
+            Ook Beschikbaar in Uw Regio
+          </h2>
+          <p className="text-center text-gray-600 mb-6">
+            Wij zijn actief in de volgende plaatsen:
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {siteConfig.business.serviceArea.map((city) => (
+              <Link
+                key={city}
+                href={`/hovenier-${city.toLowerCase().replace(/\s+/g, '-')}`}
+                className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-shadow text-sm text-gray-700 hover:text-primary"
+              >
+                <MapPin className="h-4 w-4" />
+                <span>{city}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
