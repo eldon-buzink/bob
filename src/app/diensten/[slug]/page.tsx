@@ -68,6 +68,28 @@ interface ServicePageProps {
   }>;
 }
 
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const service = mockServices[slug as keyof typeof mockServices];
+  
+  if (!service) {
+    return {};
+  }
+
+  return {
+    title: `${service.title} | Bobsgroen Hoveniers`,
+    description: `${service.summary} Professionele hovenier in Etten-Leur, Roosendaal, Sprundel en omgeving. Gratis offerte.`,
+    alternates: {
+      canonical: `${siteConfig.site.url}/diensten/${slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | Bobsgroen Hoveniers`,
+      description: service.summary,
+      url: `${siteConfig.site.url}/diensten/${slug}`,
+    },
+  };
+}
+
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = mockServices[slug as keyof typeof mockServices];

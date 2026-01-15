@@ -1,4 +1,5 @@
-import { generateLocalBusinessJsonLd } from "@/lib/structured-data";
+import { generateLocalBusinessJsonLd, generateServiceJsonLd } from "@/lib/structured-data";
+import { siteConfig } from "@/lib/site-config";
 
 export function LocalBusinessJsonLd() {
   const json = generateLocalBusinessJsonLd();
@@ -11,19 +12,7 @@ export function LocalBusinessJsonLd() {
 }
 
 export function ServiceJsonLd({ service }: { service: { title: string; summary: string; slug: string } }) {
-  const json = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: service.title,
-    description: service.summary,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Hovenier Jansen",
-      telephone: "+31 6 12 34 56 78",
-      email: "info@hovenier-jansen.nl",
-    },
-    url: `https://www.hovenier-jansen.nl/diensten/${service.slug}`,
-  };
+  const json = generateServiceJsonLd(service);
   
   return (
     <script

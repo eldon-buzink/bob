@@ -4,6 +4,7 @@ export function generateLocalBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteConfig.site.url}#business`,
     name: siteConfig.business.name,
     telephone: siteConfig.business.phone,
     email: siteConfig.business.email,
@@ -20,6 +21,13 @@ export function generateLocalBusinessJsonLd() {
       "@type": "City",
       name: city,
     })),
+    priceRange: "€€",
+    image: `${siteConfig.site.url}/logo.svg`,
+    sameAs: [
+      siteConfig.social.whatsapp,
+      siteConfig.social.instagram,
+      siteConfig.social.maps,
+    ],
   };
 }
 

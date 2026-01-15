@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hovenier Sprundel | Bobsgroen Hoveniers",
     description: "Professionele hovenier in Sprundel. Tuinontwerp, tuinaanleg en periodiek onderhoud. Gratis offerte.",
+    url: `${siteConfig.site.url}/hovenier-sprundel`,
+  },
+  alternates: {
+    canonical: `${siteConfig.site.url}/hovenier-sprundel`,
   },
 };
 

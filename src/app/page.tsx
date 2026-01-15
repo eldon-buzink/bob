@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { ServiceCard } from "@/components/service-card";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { PhoneWhatsAppSticky } from "@/components/phone-whatsapp-sticky";
+import { LocalBusinessJsonLd, AggregateRatingJsonLd } from "@/components/schema-jsonld";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -11,6 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bobsgroen Hoveniers – Tuinontwerp, Aanleg & Onderhoud",
     description: "Professionele hovenier in Etten-Leur, Roosendaal, Sprundel en omgeving. Tuinontwerp, tuinaanleg en periodiek onderhoud. Gratis offerte en transparante prijzen.",
+    url: siteConfig.site.url,
+    siteName: siteConfig.business.name,
+    locale: "nl_NL",
+    type: "website",
+  },
+  alternates: {
+    canonical: siteConfig.site.url,
   },
 };
 
@@ -39,6 +47,8 @@ const mockServices = [
 export default function HomePage() {
   return (
     <>
+      <LocalBusinessJsonLd />
+      <AggregateRatingJsonLd rating={4.9} reviewCount={120} />
       <Hero />
       
       {/* Services Section */}
