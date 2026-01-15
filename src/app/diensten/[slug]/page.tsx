@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import Link from "next/link";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/schema-jsonld";
 import { Breadcrumbs } from "@/components/breadcrumbs";
