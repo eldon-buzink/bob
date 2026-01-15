@@ -104,6 +104,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <FAQJsonLd faqs={service.faqs} />
       
       <div className="container">
+        {/* Breadcrumbs */}
+        <Breadcrumbs 
+          items={[
+            { label: "Diensten", href: "/diensten" },
+            { label: service.title }
+          ]} 
+        />
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">

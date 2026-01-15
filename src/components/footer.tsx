@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-muted">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
@@ -44,6 +44,20 @@ export function Footer() {
               <li><Link href="/projecten" className="text-muted-foreground hover:text-primary">Projecten</Link></li>
               <li><Link href="/faq" className="text-muted-foreground hover:text-primary">FAQ</Link></li>
               <li><Link href="/servicegebied" className="text-muted-foreground hover:text-primary">Servicegebied</Link></li>
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold">Servicegebied</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/hovenier-etten-leur" className="text-muted-foreground hover:text-primary">Hovenier Etten-Leur</Link></li>
+              <li><Link href="/hovenier-zevenbergen" className="text-muted-foreground hover:text-primary">Hovenier Zevenbergen</Link></li>
+              <li><Link href="/hovenier-prinsenbeek" className="text-muted-foreground hover:text-primary">Hovenier Prinsenbeek</Link></li>
+              <li><Link href="/hovenier-breda" className="text-muted-foreground hover:text-primary">Hovenier Breda</Link></li>
+              <li><Link href="/hovenier-roosendaal" className="text-muted-foreground hover:text-primary">Hovenier Roosendaal</Link></li>
+              <li><Link href="/hovenier-sprundel" className="text-muted-foreground hover:text-primary">Hovenier Sprundel</Link></li>
+              <li><Link href="/hovenier-hoeven" className="text-muted-foreground hover:text-primary">Hovenier Hoeven</Link></li>
             </ul>
           </div>
 

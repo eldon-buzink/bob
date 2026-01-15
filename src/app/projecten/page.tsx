@@ -1,4 +1,5 @@
 import { Phone, MessageCircle } from "lucide-react";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { siteConfig } from "@/lib/site-config";
 import { ProjectGallery } from "@/components/project-gallery";
 import { ProjectCategory } from "@/lib/projects-data";
@@ -9,6 +10,9 @@ export default function ProjectenPage() {
   return (
     <div className="py-16">
       <div className="container">
+        {/* Breadcrumbs */}
+        <Breadcrumbs items={[{ label: "Projecten" }]} />
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">

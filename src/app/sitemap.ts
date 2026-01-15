@@ -67,6 +67,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         // Location-specific pages
         {
+          url: `${baseUrl}/hovenier-etten-leur`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+        {
+          url: `${baseUrl}/hovenier-zevenbergen`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+        {
+          url: `${baseUrl}/hovenier-prinsenbeek`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+        {
+          url: `${baseUrl}/hovenier-breda`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.8,
+        },
+        {
           url: `${baseUrl}/hovenier-roosendaal`,
           lastModified: new Date(),
           changeFrequency: 'monthly',

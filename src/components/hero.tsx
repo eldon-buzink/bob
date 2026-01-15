@@ -91,7 +91,7 @@ export function Hero() {
             <div className="relative h-64 sm:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/APWA9274.JPEG"
-                alt="Prachtige tuin gerealiseerd door Bobsgroen Hoveniers"
+                alt="Prachtige tuin gerealiseerd door Bobsgroen Hoveniers in Etten-Leur, Roosendaal, Sprundel en omgeving"
                 fill
                 className="object-cover"
                 priority
